@@ -6179,3 +6179,43 @@ kbd {
     transform: scale(0.95);
   }
 }
+
+/* Mobile Sticky Navigation */
+.mobile-sticky-nav {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.sticky-nav-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #030917;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.sticky-nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Show only on mobile devices */
+@media (max-width: 768px) {
+  .mobile-sticky-nav {
+    display: flex;
+  }
+
+  /* Add padding to body to prevent content from being hidden behind the sticky nav */
+  body {
+    padding-bottom: 60px;
+  }
+}
