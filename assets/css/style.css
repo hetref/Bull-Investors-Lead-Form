@@ -3045,7 +3045,7 @@ kbd {
 
 .ak-slider-hero-1 {
   position: relative;
-  height: 100vh;
+  height: 100svh;
 }
 .ak-slider-hero-1 .swiper-slide .ak-hero.ak-style1 {
   position: relative;
@@ -3251,7 +3251,7 @@ kbd {
 
 .ak-slider-hero-2 {
   position: relative;
-  height: 100vh;
+  height: 100svh;
 }
 .ak-slider-hero-2 .swiper-slide .ak-hero.ak-style1 {
   position: relative;
@@ -3518,7 +3518,7 @@ kbd {
 
 .ak-slider-hero-3 {
   position: relative;
-  height: 100vh;
+  height: 100svh;
 }
 .ak-slider-hero-3 .swiper-slide .ak-hero.ak-style1 {
   position: relative;
@@ -3810,7 +3810,7 @@ kbd {
 }
 @media screen and (min-width: 991px) and (min-height: 660px) {
   .ak-slider-hero-3 {
-    height: calc(100vh - 200px);
+    height: calc(100svh - 200px);
   }
 }
 /*--------------------------------------------------------------
