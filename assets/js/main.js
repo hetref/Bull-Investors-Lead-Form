@@ -52,7 +52,7 @@
     modalVideo();
     scrollUp();
     strategicCardContent();
-    strategicCardContentHomeTwo()
+    strategicCardContentHomeTwo();
     textAnimationFadeUp();
     hoverImagesShow();
     funFactCounter();
@@ -302,16 +302,24 @@
         },
         on: {
           slideChange: function () {
-            gsap.fromTo('.swiper-slide-active .ak-hero-bg',
+            gsap.fromTo(
+              ".swiper-slide-active .ak-hero-bg",
               { autoAlpha: 0, y: 200 },
-              { autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out', stagger: 0.2 }
+              {
+                autoAlpha: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                stagger: 0.2,
+              }
             );
-          }
-        }
+          },
+        },
       });
-      gsap.fromTo('.swiper-slide-active .ak-hero-bg',
+      gsap.fromTo(
+        ".swiper-slide-active .ak-hero-bg",
         { autoAlpha: 0, y: 200 },
-        { autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out', stagger: 0.2 }
+        { autoAlpha: 1, y: 0, duration: 1, ease: "power2.out", stagger: 0.2 }
       );
     }
     if ($.exists(".ak-slider-service")) {
@@ -838,23 +846,23 @@
         elem.addEventListener(
           "mouseenter",
           () =>
-          (elem.animation = gsap.to(imgElem, {
-            scale: 1,
-            opacity: 1,
-            ease: "power3.out",
-          }))
+            (elem.animation = gsap.to(imgElem, {
+              scale: 1,
+              opacity: 1,
+              ease: "power3.out",
+            }))
         );
 
         elem.addEventListener(
           "mouseleave",
           () =>
-          (elem.animation = gsap.to(imgElem, {
-            scale: 0.5,
-            opacity: 0,
-            x: 0,
-            y: 0,
-            ease: "power3.out",
-          }))
+            (elem.animation = gsap.to(imgElem, {
+              scale: 0.5,
+              opacity: 0,
+              x: 0,
+              y: 0,
+              ease: "power3.out",
+            }))
         );
 
         elem.addEventListener("mousemove", (e) => {
@@ -1002,7 +1010,7 @@
           months: Math.floor(timeRemaining / (1000 * 60 * 60 * 24 * 30.44)),
           days: Math.floor(
             (timeRemaining % (1000 * 60 * 60 * 24 * 30.44)) /
-            (1000 * 60 * 60 * 24)
+              (1000 * 60 * 60 * 24)
           ),
           hours: Math.floor(
             (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -1073,7 +1081,6 @@
     }
   }
 
-
   if ($.exists("#contactForm")) {
     $("#contactForm #submit").on("click", function (event) {
       event.preventDefault();
@@ -1093,29 +1100,25 @@
         email: email,
         website: website,
         budget: budget,
-        description: description
+        description: description,
       };
       console.log(values);
 
-      $.ajax({
-        type: "POST",
-        url: "assets/php/appointment.php",
-        data: values,
-        success: function (response) {
-          alert(response);
-        },
-        error: function () {
-          alert("An error occurred. Please try again.");
-        },
-      });
-
+      // $.ajax({
+      //   type: "POST",
+      //   url: "assets/php/appointment.php",
+      //   data: values,
+      //   success: function (response) {
+      //     alert(response);
+      //   },
+      //   error: function () {
+      //     alert("An error occurred. Please try again.");
+      //   },
+      // });
     });
-
   }
 
-
   if ($.exists("#CommentsForm")) {
-
     $("#CommentsForm #submit").on("click", function (event) {
       event.preventDefault();
 
@@ -1128,27 +1131,23 @@
       var values = {
         fullname: name,
         email: email,
-        description: description
+        description: description,
       };
       console.log(values);
 
-      $.ajax({
-        type: "POST",
-        url: "assets/php/comments.php",
-        data: values,
-        success: function (response) {
-          alert(response);
-        },
-        error: function () {
-          alert("An error occurred. Please try again.");
-        },
-      });
-
+      // $.ajax({
+      //   type: "POST",
+      //   url: "assets/php/comments.php",
+      //   data: values,
+      //   success: function (response) {
+      //     alert(response);
+      //   },
+      //   error: function () {
+      //     alert("An error occurred. Please try again.");
+      //   },
+      // });
     });
-
-
   }
-
 
   if ($.exists("#ContactThompsonForm")) {
     $("#ContactThompsonForm #submit").on("click", function (event) {
@@ -1165,26 +1164,23 @@
         fullname: name,
         phone: phone,
         email: email,
-        description: description
+        description: description,
       };
       console.log(values);
 
-      $.ajax({
-        type: "POST",
-        url: "assets/php/contactThompsonForm.php",
-        data: values,
-        success: function (response) {
-          alert(response);
-        },
-        error: function () {
-          alert("An error occurred. Please try again.");
-        },
-      });
-
+      // $.ajax({
+      //   type: "POST",
+      //   url: "assets/php/contactThompsonForm.php",
+      //   data: values,
+      //   success: function (response) {
+      //     alert(response);
+      //   },
+      //   error: function () {
+      //     alert("An error occurred. Please try again.");
+      //   },
+      // });
     });
-
   }
-
 
   if ($.exists("#FooterForm")) {
     $("#FooterForm #submit").on("click", function (event) {
@@ -1196,19 +1192,17 @@
         email: email,
       };
 
-      $.ajax({
-        type: "POST",
-        url: "assets/php/footeremail.php",
-        data: values,
-        success: function (response) {
-          alert(response);
-        },
-        error: function () {
-          alert("An error occurred. Please try again.");
-        },
-      });
-
+      // $.ajax({
+      //   type: "POST",
+      //   url: "assets/php/footeremail.php",
+      //   data: values,
+      //   success: function (response) {
+      //     alert(response);
+      //   },
+      //   error: function () {
+      //     alert("An error occurred. Please try again.");
+      //   },
+      // });
     });
-
   }
 })(jQuery);
