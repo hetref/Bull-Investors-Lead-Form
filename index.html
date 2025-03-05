@@ -641,7 +641,7 @@
       <div class="contact-form-img image-hov-one">
         <img src="assets/img/contact/contact-img-n.png" alt="..." />
       </div>
-      <div class="contact-form">
+      <div class="contact-form" id="contact-form-redirect">
         <div>
           <h5 class="contact-title">
             <b>Spots are filling fast!</b> Take control of your financial
@@ -789,7 +789,7 @@
           d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
       </svg>
     </a>
-    <a href="mailto:compliance.bullinvestor@gmail.com" class="sticky-nav-item">
+    <a href="#contact-form-redirect" class="sticky-nav-item">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
         <path
           d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -873,58 +873,6 @@
       });
     });
   </script>
-  <!-- <script>
-      $(document).ready(function () {
-        const scriptURL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
-        const $form = $("#leadFormBulls");
-        const $submitButton = $("#submitLeadForm");
-
-        $form.on("submit", function (e) {
-          e.preventDefault();
-
-          // Disable submit button and show loading state
-          $submitButton.prop("disabled", true).html("Submitting...");
-
-          // Create form data object
-          const formData = new FormData(this);
-
-          // Convert FormData to object for jQuery ajax
-          const formObject = {};
-          formData.forEach((value, key) => {
-            formObject[key] = value;
-          });
-
-          $.ajax({
-            url: scriptURL,
-            type: "POST",
-            data: formObject,
-            success: function (response) {
-              alert("Thank you! Form submitted successfully");
-              $form[0].reset();
-            },
-            error: function (error) {
-              console.error("Error!", error);
-              alert(
-                "There was an error submitting the form. Please try again."
-              );
-            },
-            complete: function () {
-              // Re-enable submit button and restore original text
-              $submitButton.prop("disabled", false)
-                .html(`<span>Send Message</span>
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                      <g clip-path="url(#clip0_201_978343789)">
-                        <path d="M1.42236 6.99728H13.089M13.089 6.99728L7.48903 1.39728M13.089 6.99728L7.48903 12.5973"
-                          stroke="#030917" stroke-linecap="round" stroke-linejoin="round" />
-                      </g>
-                    </svg>
-                  </span>`);
-            },
-          });
-        });
-      });
-    </script> -->
   <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
   <script src="assets/js/plugins/swiper.min.js"></script>
 
