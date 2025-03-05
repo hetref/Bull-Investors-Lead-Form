@@ -5709,11 +5709,29 @@ kbd {
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
+.contact-form-header .mini-title {
+  display: none !important;
+}
 @media screen and (max-width: 991px) {
+  .left-section-hero {
+    display: none !important;
+  }
   .contact-form-header {
+    flex-direction: column !important;
+    gap: 40px;
+    right: 0 !important;
+    /* position: initial !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important; */
     /* right: 0 !important;
     left: 0 !important; */
-    display: none !important;
+    /* display: none !important; */
+  }
+  .contact-form-header .mini-title {
+    display: block !important;
+    border: none !important;
+    font-size: 18px !important;
   }
 }
 .contact-form .contact-title {
