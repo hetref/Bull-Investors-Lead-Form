@@ -165,6 +165,19 @@
         .slideToggle();
     });
 
+    $(".ak-nav_list_item").on("click", function () {
+      $(this)
+        .toggleClass("ak-toggle_active")
+        .parent()
+        .siblings(".ak-nav_list")
+        .slideToggle();
+
+      // Close mobile menu
+      $(".ak-munu_toggle").removeClass("ak-toggle_active");
+      $(".ak-nav").removeClass("ak-nav_active"); // If you're using this class for mobile menu
+      $(".ak-nav_list").slideUp(); // Close all nav lists
+    });
+
     $(".ak-munu_dropdown_toggle").on("click", function () {
       $(this)
         .toggleClass("active")
