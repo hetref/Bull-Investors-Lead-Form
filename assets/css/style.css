@@ -6232,8 +6232,9 @@ kbd {
     display: flex;
   }
 
-  .copy-right {
-    padding-bottom: 100px;
+  .footer-spacing {
+    height: 100px;
+    width: 100%;
   }
 
   /* Add padding to body to prevent content from being hidden behind the sticky nav */
